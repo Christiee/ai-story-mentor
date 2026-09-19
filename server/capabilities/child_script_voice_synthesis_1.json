@@ -1,0 +1,37 @@
+{
+  "id": "child_script_voice_synthesis_1",
+  "pluginKey": "@official-plugins/ai-speech-synthesis",
+  "pluginVersion": "1.0.13",
+  "name": "儿童剧本语音合成",
+  "description": "将儿童创作的剧本内容转换为生动的语音配音，支持选择男女声、调节语速，让孩子听到自己的剧本被\"演出来\"",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "script_content": {
+        "type": "string",
+        "description": "需要合成语音的儿童剧本完整内容"
+      },
+      "voice_gender": {
+        "type": "string",
+        "description": "配音音色性别，可选值：female（女声）、male（男声）"
+      },
+      "playback_speed": {
+        "type": "string",
+        "description": "语音播放速度，可选值：0.2（极慢）、0.5（慢速）、0.8（稍慢）、1.0（正常）、1.2（稍快）、1.5（快速）、2.0（极快）"
+      }
+    },
+    "required": [
+      "script_content"
+    ]
+  },
+  "formValue": {
+    "volumeRatio": "1.0",
+    "text": "{{input.script_content}}",
+    "voiceType": "{{input.voice_gender}}",
+    "speedRatio": "{{input.playback_speed}}"
+  },
+  "createdAt": 1789004192891,
+  "updatedAt": 1789004192891,
+  "createdBy": 7587544575024041181
+}

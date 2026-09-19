@@ -1,0 +1,32 @@
+{
+  "id": "script_picture_book_illustration_generator_1",
+  "pluginKey": "@official-plugins/ai-text-to-image",
+  "pluginVersion": "1.0.21",
+  "name": "剧本绘本式分页插图生成器",
+  "description": "根据剧本内容生成符合绘本风格的分页插图，支持自定义图片比例",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "script_content": {
+        "type": "string",
+        "description": "剧本单页内容描述，包含场景、人物、动作等关键信息"
+      },
+      "image_ratio": {
+        "type": "string",
+        "description": "图片比例，支持的值：1:1、4:3、3:4、16:9、9:16、3:2、2:3"
+      }
+    },
+    "required": [
+      "script_content"
+    ]
+  },
+  "formValue": {
+    "prompt": "你是一位专业的儿童绘本插画师，擅长绘制温馨治愈、色彩丰富的绘本风格插图。\n\n请根据以下剧本内容生成一页绘本插图：\n剧本内容：{{input.script_content}}\n\n绘画要求：\n1. 风格：典型绘本插画风格，线条圆润柔和，色彩明亮温暖\n2. 画面：重点突出剧本中的核心角色和关键场景，细节丰富\n3. 构图：适合分页展示，留有适当的文字排版空间\n4. 氛围：符合剧本内容传递的情感基调，生动有故事感\n5. 质量：高清细腻，无多余元素，画面完整",
+    "ratio": "{{input.image_ratio}}",
+    "watermark": false
+  },
+  "createdAt": 1789004186329,
+  "updatedAt": 1789004186329,
+  "createdBy": 7587544575024041181
+}

@@ -1,0 +1,31 @@
+{
+  "id": "child_voice_speech_to_text_1",
+  "pluginKey": "@official-plugins/speech-file-to-text",
+  "pluginVersion": "1.0.15",
+  "name": "孩子语音录制识别为中文",
+  "description": "将孩子按住麦克风录制的语音识别为中文普通话文字，作为对话输入发送给剧本导师。",
+  "icon": "",
+  "paramsSchema": {
+    "type": "object",
+    "properties": {
+      "audio_file": {
+        "type": "array",
+        "format": "plugin-file-url",
+        "description": "孩子录制的语音音频文件",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "audio_file"
+    ]
+  },
+  "formValue": {
+    "audioUrl": "{{input.audio_file}}",
+    "language": "zh"
+  },
+  "createdAt": 1789012559658,
+  "updatedAt": 1789012559658,
+  "createdBy": 7587544575024041181
+}

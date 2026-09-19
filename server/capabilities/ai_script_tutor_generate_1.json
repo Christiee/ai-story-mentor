@@ -1,0 +1,40 @@
+{
+  "id": "ai_script_tutor_generate_1",
+  "pluginKey": "@official-plugins/ai-text-generate",
+  "pluginVersion": "1.0.21",
+  "name": "AI剧本导师文本生成",
+  "description": "用于AI剧本导师的引导式对话、剧本结构化生成、亮点日报生成等场景",
+  "icon": "",
+  "paramsSchema": {
+    "properties": {
+      "user_input": {
+        "description": "用户输入的需求内容、剧本片段或相关素材",
+        "type": "string"
+      },
+      "additional_requirements": {
+        "type": "string",
+        "description": "额外的生成要求（可选）"
+      },
+      "scene_type": {
+        "type": "string",
+        "description": "使用场景类型：引导式对话/剧本结构化生成/亮点日报生成"
+      }
+    },
+    "required": [
+      "scene_type",
+      "user_input"
+    ],
+    "type": "object"
+  },
+  "formValue": {
+    "modelID": "2015",
+    "modelParams": {
+      "maxTokens": 8192,
+      "temperature": 0.5
+    },
+    "prompt": "你是一位资深的专业剧本创作导师，拥有丰富的剧本创作、指导和评估经验，精通各类剧本结构、叙事技巧和行业标准。\n\n当前场景：{{input.scene_type}}\n\n用户输入内容：{{input.user_input}}\n\n请根据当前场景和用户输入提供专业的输出：\n\n【如果是引导式对话场景】\n1. 先回应用户的问题或观点，提供专业、有建设性的反馈\n2. 采用引导式提问的方式，启发用户深入思考剧本的核心要素\n3. 给出可操作的改进建议和创作思路\n4. 语气友好、鼓励为主，避免过于生硬的评判\n\n【如果是剧本结构化生成场景】\n1. 按照标准剧本结构输出内容，包含场景描述、人物设定、对话、动作说明等要素\n2. 结构清晰，格式规范，符合行业通用的剧本撰写标准\n3. 内容逻辑连贯，人物性格鲜明，对话符合人物设定\n4. 可根据用户需求调整剧本的长度、风格和类型\n\n【如果是亮点日报生成场景】\n1. 提炼剧本创作过程中的核心进展、亮点成果\n2. 总结遇到的问题和解决方案\n3. 规划下一步的创作计划和重点任务\n4. 内容简洁明了，重点突出，逻辑清晰\n\n额外要求：{{input.additional_requirements}}\n\n输出要求：\n- 内容专业准确，符合剧本创作的行业规范\n- 语言通顺自然，易于理解和执行\n- 根据场景类型调整输出格式，保证结构清晰"
+  },
+  "createdAt": 1789004191008,
+  "updatedAt": 1789004191008,
+  "createdBy": 7587544575024041181
+}
