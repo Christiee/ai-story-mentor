@@ -33,6 +33,10 @@
 │   └── common/           # 共享工具
 ├── shared/               # 前后端共享类型定义
 │   └── api.interface.ts
+├── examples/             # 示例素材（AI 生成，版权干净）
+│   └── assets/
+│       ├── images/       # 绘本风格示例图片
+│       └── audio/        # 示例配音音频
 ├── package.json
 ├── vite.config.ts
 └── tsconfig.json
@@ -131,6 +135,17 @@ npm run build
 - **孩子端**：大字号、圆润按钮、更多插画、语音交互
 - **家长端**：正常字号、信息密度适中、数据和内容展示
 
+## 示例素材
+
+仓库 `examples/assets/` 目录包含 AI 生成的示例素材，用于演示和开发测试：
+
+- **图片（4 张）**：儿童绘本水彩风格，包括封面图和内页插图
+- **音频（3 段）**：AI 语音合成的儿童故事旁白，含男女声两种音色
+
+详见 [examples/assets/README.md](examples/assets/README.md)。
+
 ## License
+
+MIT
 
 MIT
